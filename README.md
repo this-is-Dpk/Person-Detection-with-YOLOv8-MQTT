@@ -1,11 +1,12 @@
 🧠 Person Detection with YOLOv8 & MQTT
 
 This project demonstrates real-time person detection using YOLOv8, OpenCV, and MQTT.
+
 It consists of two scripts:
 
 Publisher → Detects persons in video frames and publishes images to an MQTT broker.
 Subscriber → Receives the images and saves them to disk automatically.
-Features
+✨ Features
 
 ✔ Real-time person detection using YOLOv8
 ✔ Publishes detected frames over MQTT
@@ -13,18 +14,18 @@ Features
 ✔ Auto-run subscriber on reboot using systemd
 ✔ Organized directory for saved images
 
-Hardware Requirements
+🖥 Hardware Requirements
 Any Linux device (tested on Yocto build system)
 Camera (USB or CSI) for video capture
 MQTT Broker (e.g., Mosquitto running on LAN)
-Software Requirements
+📦 Software Requirements
 Python 3.8+
 Virtual Environment (venv) recommended
 Libraries:
 ultralytics
 opencv-python
 paho-mqtt
-Project Structure
+📂 Project Structure
 mqtt_person_detection/
 ├── publisher.py        # YOLOv8 + MQTT Publisher
 ├── subscriber.py       # MQTT Subscriber
@@ -32,32 +33,26 @@ mqtt_person_detection/
 ├── Makefile            # Build & Run helper
 └── README.md           # Documentation
 
-Installation & Setup
-
-Clone this repository:
-
+⚙️ Installation & Setup
+1️⃣ Clone this repository
 git clone https://github.com/yourusername/mqtt_person_detection.git
 cd mqtt_person_detection
 
-
-Create and activate virtual environment:
-
+2️⃣ Create and activate virtual environment
 python3 -m venv yocto_venv
 source yocto_venv/bin/activate
 
-
-Install dependencies:
-
+3️⃣ Install dependencies
 pip install -r requirements.txt
 
-Usage
-Run Publisher
+🚀 Usage
+▶ Run Publisher
 
 Detects persons from camera feed and publishes images:
 
 make run-pub
 
-Run Subscriber
+▶ Run Subscriber
 
 Receives and saves images into:
 
@@ -65,9 +60,10 @@ Receives and saves images into:
 
 make run-sub
 
-Auto Start Subscriber on Boot
+🔄 Auto Start Subscriber on Boot
 
-Create a systemd service file /etc/systemd/system/project1.service:
+Create a systemd service file:
+/etc/systemd/system/project1.service
 
 [Unit]
 Description=MQTT Subscriber Auto Start
@@ -85,5 +81,6 @@ WantedBy=multi-user.target
 
 Enable the service:
 
+sudo systemctl daemon-reload
 sudo systemctl enable project1.service
 sudo systemctl start project1.service
