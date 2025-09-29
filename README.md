@@ -25,12 +25,3 @@ Libraries:
 ultralytics
 opencv-python
 paho-mqtt
-
-
-
-
-Enable the service:
-
-sudo systemctl daemon-reload
-sudo systemctl enable project1.service
-sudo systemctl start project1.service
