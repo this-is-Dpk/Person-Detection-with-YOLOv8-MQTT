@@ -1,5 +1,5 @@
-#🧠 Person Detection with YOLOv8 & MQTT
-
+# 🧠 Person Detection with YOLOv8 & MQTT
+# stm32-smart-weather-rtos
 This project demonstrates real-time person detection using YOLOv8, OpenCV, and MQTT.
 
 It consists of two scripts:
