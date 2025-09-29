@@ -1,4 +1,4 @@
-🧠 Person Detection with YOLOv8 & MQTT
+#🧠 Person Detection with YOLOv8 & MQTT
 
 This project demonstrates real-time person detection using YOLOv8, OpenCV, and MQTT.
 
